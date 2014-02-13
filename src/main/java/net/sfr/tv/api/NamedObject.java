@@ -1,5 +1,5 @@
 /*
- * Copyright 2012,2013 - SFR (http://www.sfr.com/)
+ * Copyright 2014 matthieu.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package net.sfr.tv.api;
 
 /**
- * A JMX managed object.
- * 
+ *
  * @author matthieu
  */
-public interface ManagedObject extends NamedObject {
-    
+public interface NamedObject {
+
     /**
-     * @return The associated MBean instance.
+     * @return ObjectName
      */
-    Object getMBean();
-    
+    String getName();
 }

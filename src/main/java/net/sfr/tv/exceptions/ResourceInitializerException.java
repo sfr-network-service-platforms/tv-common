@@ -18,11 +18,15 @@ package net.sfr.tv.exceptions;
 /**
  * Throwed during resource initialization routines.
  * 
- * @author matthieu
+ * @author matthieu.chaplin@sfr.com
  */
 public class ResourceInitializerException extends Exception {
     
     public ResourceInitializerException(Throwable cause) {
         super(cause);
+    }
+    
+    public ResourceInitializerException(String message, Throwable cause) {
+        super(message, cause);
     }
 }
