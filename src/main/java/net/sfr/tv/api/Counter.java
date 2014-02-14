@@ -22,6 +22,8 @@ package net.sfr.tv.api;
  */
 public interface Counter {
     
+    void reset();
+    
     void increment();
     
     Long value();
