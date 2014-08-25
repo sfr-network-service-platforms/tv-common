@@ -12,9 +12,9 @@
    
     <groupId>net.sfr.tv</groupId>
     <artifactId>common</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>jar</packaging>
-    <name>SFR IPTV Common Library</name>
+    <name>Public TV Commons</name>
     
     <licenses>
         <license>

@@ -1,6 +1,7 @@
 package net.sfr.tv.impl;
 
 import java.io.Serializable;
+import java.util.concurrent.atomic.AtomicLong;
 import net.sfr.tv.api.Counter;
 
 /**
@@ -9,21 +10,21 @@ import net.sfr.tv.api.Counter;
  */
 public class SerializableCounter implements Counter, Serializable {
 
-    private Long count = Long.valueOf(0);
+    private AtomicLong count = new AtomicLong(0);
 
     @Override
     public void reset() {
-        count = Long.valueOf(0);
+        count = new AtomicLong(0);
     }
     
     @Override
     public void increment() {
-        count++;
+        count.incrementAndGet();
     }
 
     @Override
     public Long value() {
-        return count;
+        return count.get();
     }
     
     @Override
